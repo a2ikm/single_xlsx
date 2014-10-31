@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/a2ikm/simple_xlsx.svg)](https://travis-ci.org/a2ikm/simple_xlsx)
+
 # SimpleXLSX
 
 SimpleXLSX wraps [rubyXL](http://rubygems.org/gems/rubyXL) to treat single-sheet XLSX files like CSV.
