@@ -34,4 +34,10 @@ class SimpleXlsxTest < Minitest::Test
   ensure
     tempfile.unlink if tempfile
   end
+
+  def test_generate_without_block
+    assert_raises ArgumentError do
+      SimpleXLSX.generate
+    end
+  end
 end
