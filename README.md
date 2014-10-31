@@ -40,6 +40,23 @@ SimpleXLSX.read("path/to/xlsx")
     ]
 ```
 
+### Write
+
+You can write XLSX data into `String`.
+
+```ruby
+require "simple_xlsx"
+
+binary = SimpleXLSX.generate do |sheet|
+  sheet << ["Name", "Age"]
+  sheet << ["Einstein", 76]
+  sheet << ["Feynman", 69]
+end
+```
+
+Currently we don't provide `SimpleXLSX.open` as `CSV.open`.
+So, if you want to write XLSX files, you need to write this `binary` to files by yourself.
+
 ## Contributing
 
 1. Fork it ( https://github.com/a2ikm/simple_xlsx/fork )
