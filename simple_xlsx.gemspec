@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = SimpleXlsx::VERSION
   spec.authors       = ["Masato Ikeda"]
   spec.email         = ["masato.ikeda@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{rubyXL wrapper to treat single-sheet XLSX files like CSV.}
+  spec.description   = %q{rubyXL wrapper to treat single-sheet XLSX files like CSV.}
+  spec.homepage      = "https://github.com/a2ikm/simple_xlsx"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
