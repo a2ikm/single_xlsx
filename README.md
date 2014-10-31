@@ -20,7 +20,25 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Read
+
+You can read XLSX files into `Array` of `Array`.
+
+| Name     | Age |
+|----------|-----|
+| Einstein |  76 |
+| Feynman  |  69 |
+
+```ruby
+require "simple_xlsx"
+
+SimpleXLSX.read("path/to/xlsx")
+#=> [
+      ["Name", "Age"],
+      ["Einstein", 76],
+      ["Feynman", 69]
+    ]
+```
 
 ## Contributing
 

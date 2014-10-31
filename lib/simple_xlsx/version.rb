@@ -1,3 +1,3 @@
-module SimpleXlsx
+module SimpleXLSX
   VERSION = "0.0.1"
 end
