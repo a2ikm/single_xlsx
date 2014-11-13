@@ -1,13 +1,9 @@
 module SimpleXLSX
   class Sheet
-    attr_reader :rubyxl_workbook
+    attr_reader :rubyxl_worksheet
 
-    def initialize
-      @rubyxl_workbook = RubyXL::Workbook.new
-    end
-
-    def rubyxl_worksheet
-      rubyxl_workbook[0]
+    def initialize(rubyxl_worksheet)
+      @rubyxl_worksheet = rubyxl_worksheet
     end
 
     def <<(cells)

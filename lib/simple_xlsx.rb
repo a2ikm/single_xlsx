@@ -15,8 +15,9 @@ module SimpleXLSX
   def self.generate
     raise ArgumentError, "no block given" unless block_given?
 
-    sheet = Sheet.new
+    book = RubyXL::Workbook.new
+    sheet = Sheet.new(book[0])
     yield sheet
-    sheet.rubyxl_workbook.stream.read
+    book.stream.read
   end
 end
