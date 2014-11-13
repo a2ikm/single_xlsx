@@ -1,4 +1,4 @@
-module SimpleXLSX
+module SingleXLSX
   class Sheet
     attr_reader :rubyxl_worksheet
 

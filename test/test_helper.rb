@@ -8,4 +8,4 @@ Minitest::Reporters.use! [Minitest::Reporters::ProgressReporter.new]
 
 Dir[File.expand_path("../support/*.rb", __FILE__)].each { |file| require file }
 
-require "simple_xlsx"
+require "single_xlsx"

@@ -1,10 +1,10 @@
-require "simple_xlsx/version"
-require "simple_xlsx/sheet"
+require "single_xlsx/version"
+require "single_xlsx/sheet"
 require "active_support/core_ext/object/try"
 require "active_support/core_ext/object/blank"
 require "rubyXL"
 
-module SimpleXLSX
+module SingleXLSX
   def self.read(path)
     book = RubyXL::Parser.parse(path)
     book[0].sheet_data.rows.map do |row|

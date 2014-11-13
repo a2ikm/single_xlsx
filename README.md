@@ -1,15 +1,15 @@
-[![Build Status](https://travis-ci.org/a2ikm/simple_xlsx.svg)](https://travis-ci.org/a2ikm/simple_xlsx)
+[![Build Status](https://travis-ci.org/a2ikm/single_xlsx.svg)](https://travis-ci.org/a2ikm/single_xlsx)
 
-# SimpleXLSX
+# SingleXLSX
 
-SimpleXLSX wraps [rubyXL](http://rubygems.org/gems/rubyXL) to treat single-sheet XLSX files like CSV.
+SingleXLSX wraps [rubyXL](http://rubygems.org/gems/rubyXL) to treat single-sheet XLSX files like CSV.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'simple_xlsx'
+gem 'single_xlsx'
 ```
 
 And then execute:
@@ -18,7 +18,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install simple_xlsx
+    $ gem install single_xlsx
 
 ## Usage
 
@@ -32,9 +32,9 @@ You can read XLSX files into `Array` of `Array`.
 | Feynman  |  69 |
 
 ```ruby
-require "simple_xlsx"
+require "single_xlsx"
 
-SimpleXLSX.read("path/to/xlsx")
+SingleXLSX.read("path/to/xlsx")
 #=> [
       ["Name", "Age"],
       ["Einstein", 76],
@@ -47,21 +47,21 @@ SimpleXLSX.read("path/to/xlsx")
 You can write XLSX data into `String`.
 
 ```ruby
-require "simple_xlsx"
+require "single_xlsx"
 
-binary = SimpleXLSX.generate do |sheet|
+binary = SingleXLSX.generate do |sheet|
   sheet << ["Name", "Age"]
   sheet << ["Einstein", 76]
   sheet << ["Feynman", 69]
 end
 ```
 
-Currently we don't provide `SimpleXLSX.open` as `CSV.open`.
+Currently we don't provide `SingleXLSX.open` as `CSV.open`.
 So, if you want to write XLSX files, you need to write this `binary` to files by yourself.
 
 ## Contributing
 
-1. Fork it ( https://github.com/a2ikm/simple_xlsx/fork )
+1. Fork it ( https://github.com/a2ikm/single_xlsx/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
