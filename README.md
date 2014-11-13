@@ -2,7 +2,7 @@
 
 # SingleXLSX
 
-SingleXLSX wraps [rubyXL](http://rubygems.org/gems/rubyXL) to treat single-sheet XLSX files like CSV.
+SingleXLSX wraps [rubyXL](http://rubygems.org/gems/rubyXL) to read and write single-sheet XLSX files like ruby's standard CSV library.
 
 ## Installation
 
@@ -56,8 +56,17 @@ binary = SingleXLSX.generate do |sheet|
 end
 ```
 
-Currently we don't provide `SingleXLSX.open` as `CSV.open`.
-So, if you want to write XLSX files, you need to write this `binary` to files by yourself.
+or into a file.
+
+```ruby
+require "single_xlsx"
+
+SingleXLSX.open("path/to/xlsx") do |sheet|
+  sheet << ["Name", "Age"]
+  sheet << ["Einstein", 76]
+  sheet << ["Feynman", 69]
+end
+```
 
 ## Contributing
 
